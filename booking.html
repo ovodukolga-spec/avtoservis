@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Запись на обслуживание — Автосервис</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/booking.css">
+  <script type="module" src="js/booking.js"></script>
+</head>
+<body class="bg-light">
+  <header class="booking-header">
+    <div class="container booking-nav">
+      <a class="navbar-brand" href="index.html">Автосервис<span>.</span></a>
+      <nav aria-label="Главное меню">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="booking.html" aria-current="page">Запись</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container booking-main py-5">
+    <h1 class="mb-2">Запись на обслуживание</h1>
+    <p class="mb-4">Учебный режим. Используйте вымышленные данные. Заявки хранятся только в этом браузере.</p>
+
+    <div class="row">
+      <section class="col-lg-5 mb-4" aria-labelledby="booking-heading">
+        <div class="booking-panel">
+          <h2 id="booking-heading">Новая заявка</h2>
+          <form id="booking-form" autocomplete="off">
+            <fieldset disabled>
+              <div class="form-group">
+                <label for="service">Услуга</label>
+                <select class="form-control" id="service" name="serviceId" required>
+                  <option value="">Выберите услугу</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="customer-name">Имя</label>
+                <input class="form-control" id="customer-name" name="customerName" maxlength="80" required>
+              </div>
+              <div class="form-group">
+                <label for="vehicle">Автомобиль</label>
+                <input class="form-control" id="vehicle" name="vehicle" maxlength="100" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-sm-6">
+                  <label for="date">Дата</label>
+                  <input class="form-control" type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="time">Время</label>
+                  <input class="form-control" type="time" id="time" name="time" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="note">Комментарий (необязательно)</label>
+                <textarea class="form-control" id="note" name="note" rows="2" maxlength="500"></textarea>
+              </div>
+              <button class="btn btn-dark px-3 py-2" type="submit">Сохранить заявку</button>
+            </fieldset>
+          </form>
+          <p class="mt-3 mb-0" id="booking-status" role="status"></p>
+          <noscript>Для работы с заявками включите JavaScript.</noscript>
+        </div>
+      </section>
+
+      <section class="col-lg-7 mb-4" aria-labelledby="appointments-heading">
+        <div class="booking-panel">
+          <h2 id="appointments-heading">Мои заявки</h2>
+          <p class="mb-0" id="appointments-status" role="status" tabindex="-1"></p>
+          <ul class="list-unstyled mb-0" id="appointments"></ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container pb-4">
+    <small>Шаблон сайта — <a href="https://colorlib.com/">Colorlib</a>, CC BY 3.0.</small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.booking-header {
+    border-bottom: 1px solid #e5e1dc;
+    background: #fff;
+}
+
+.booking-nav,
+.booking-nav nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem 1.25rem;
+}
+
+.booking-nav {
+    justify-content: space-between;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+.booking-nav nav a {
+    color: #292929;
+}
+
+.booking-nav nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: .25em;
+}
+
+.booking-main {
+    color: #333;
+}
+
+.booking-panel {
+    height: 100%;
+    padding: clamp(1rem, 3vw, 1.75rem);
+    border: 1px solid #e5e1dc;
+    border-radius: .5rem;
+    background: #fff;
+}
+
+.booking-main h2 {
+    font-size: 1.5rem;
+}
+
+.booking-main input.form-control,
+.booking-main select.form-control {
+    min-height: 44px;
+}
+
+.booking-item {
+    padding: 1rem 0;
+    border-top: 1px solid #e5e1dc;
+    overflow-wrap: anywhere;
+}
+
+.booking-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.booking-item p {
+    margin-bottom: .25rem;
+    white-space: pre-wrap;
+}
+
+.booking-main :focus-visible,
+.booking-header :focus-visible {
+    outline: 2px solid #864900;
+    outline-offset: 3px;
+}
